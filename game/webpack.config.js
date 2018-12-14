@@ -1,5 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
 
 module.exports = {
   mode: 'development',
@@ -19,7 +22,25 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => [autoprefixer({
+                browsers: ['> 1%', 'last 2 versions'],
+              })],
+            },
+          },
+          {
+            loader: 'sass-loader',
+          },
+        ],
       },
     ],
   },
@@ -35,5 +56,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/screens/home/index.html',
     }),
+    new CopyWebpackPlugin([{
+      from: 'src/**/*.png',
+      to: '',
+      transformPath: targetPath => targetPath.replace('src/', ''),
+    }], { debug: 'info' }),
   ],
 };
