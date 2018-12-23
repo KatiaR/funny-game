@@ -231,7 +231,7 @@ $k-right-ear: (
     animation: none;
   }
   
-  &:before {
+   /* &:before {
     width: 90%;
     height: 0.5vmin;
     background: $color-primary;
@@ -247,7 +247,7 @@ $k-right-ear: (
     top: calc(100% + 0.5vmin);
     z-index: 3;
     background: $color-bg;
-  }
+  } */
 }
 
 div:before, div:after {
@@ -690,22 +690,9 @@ div:before, div:after {
   }
 }
 
-html, body {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: $color-bg;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
 
-*, *:before, *:after {
+
+ *, *:before, *:after {
   box-sizing: border-box;
   position: relative;
 }
