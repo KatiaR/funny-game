@@ -1,7 +1,32 @@
-.battle-field  {
-background-image: url(./images/smow.png)
-}
-
 .hidden {
     display: none;
+}
+
+.battle-field {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    width: 100%;
+    .hero-field {
+        width: 45%;
+    }
+    .monster-field {
+      width: 45%;
+    }
+    .progress {
+      margin: 10px 0;
+    }
+
+}
+
+.playing-field {
+    padding: 0;
+    background-image: url(./dist/screens/battle/images/smow.png);
+    width: 100%;
+
+  .names-participants {
+    display: flex;
+    justify-content: center;
+    width: 45%;
   }
+}
