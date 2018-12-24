@@ -33,13 +33,3 @@ export function getArithmeticResult(firstNumber, secondNumber, operator) {
   }
   return result;
 }
-
-export function compaireClientResult(result) {
-  const inputValue = document.getElementsByClassName('form-control')[0].value;
-  if (inputValue === result) {
-    const lifeMonster = document.getElementsByClassName('progress-bar-monster')[0];
-    const widthMonsterLife = getComputedStyle(lifeMonster).width;
-    const reduceLife = 20;
-    const currentValueLife = widthMonsterLife - reduceLife;
-    lifeMonster.style.width = currentValueLife;
-}

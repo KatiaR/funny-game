@@ -1,6 +1,7 @@
 import template from './calculator-template';
 import './calculator.scss';
 import randomInteger, { getArithmeticOperator, getArithmeticResult } from './calculator-utils';
+import compaireClientResult from '../scoreLife/line-score';
 
 
 export default function addCalculatorTaskTemplate() {
@@ -19,6 +20,6 @@ export default function addCalculatorTaskTemplate() {
   getArithmeticOperator();
   const operator = getArithmeticOperator();
   const result = getArithmeticResult(firstNumberTextContent, secondNumberTextContent, operator);
-
-  
+  compaireClientResult(result);
+  calculatorField.hidden = true;
 }

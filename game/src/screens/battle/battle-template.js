@@ -8,7 +8,7 @@ export default `
   <div class="d-flex justify-content-around">
     <div class="hero-field">
     <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar progress-bar-hero" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
     </div>
     <div class="monster-field">
