@@ -3,6 +3,7 @@ import 'bootstrap';
 
 import addModalTemplate from './components/modal-dialog/modal';
 import addHeroTemplate from './screens/hero/hero';
+// import addMonsterTemplate from './screens/monster/monster';
 import generateGameField from './screens/battle/battle';
 
 window.onload = () => {
@@ -10,4 +11,5 @@ window.onload = () => {
   startButton.addEventListener('click', () => addModalTemplate());
   startButton.addEventListener('click', () => generateGameField());
   startButton.addEventListener('click', () => addHeroTemplate());
+  // startButton.addEventListener('click', () => addMonsterTemplate());
 };

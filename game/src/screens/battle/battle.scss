@@ -2,17 +2,30 @@
     display: none;
 }
 
+.reduce-life80 {
+  width: 80%;
+}
+.reduce-life60 {
+  width: 80%;
+}
+.reduce-life80 {
+  width: 40%;
+}
+.reduce-life20 {
+  width: 20%;
+}
+
 .battle-field {
     width: 500px;
     height: 500px;
-    background-color: red;
+    background-color: rgb(194, 191, 191);
     width: 100%;
     .hero-field {
-        width: 45%;
+        width: 30%;
     }
     .monster-field {
-      width: 45%;
-    }
+      width: 30%;
+          }
     .progress {
       margin: 10px 0;
     }

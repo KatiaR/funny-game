@@ -13,7 +13,7 @@ export default `
     </div>
     <div class="monster-field">
     <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="progress-bar progress-bar-monster" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
   </div>
     </div>
   </div>
