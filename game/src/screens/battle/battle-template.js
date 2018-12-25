@@ -2,7 +2,7 @@ export default `
 
 <section class="battle-field">
   <nav class="navbar navbar-light bg-light">
-  <div class="names-participants"> <a class="navbar-brand"  href="#">Hero</a> </div>
+  <div class="names-participants"> <a class="navbar-brand" id = 'hero-name'  href="#">Hero</a> </div>
   <div class="names-participants"> <a class="navbar-brand" id = 'monster-name' href="#">Monster</a> </div>
    </nav>
   <div class="d-flex justify-content-around">
@@ -17,5 +17,11 @@ export default `
   </div>
     </div>
   </div>
+  <div class= "button-position">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Сhoose a spell
+</button>
+  </div>
+  
 </section>
 `;

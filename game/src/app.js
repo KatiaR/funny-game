@@ -9,9 +9,9 @@ import generateGameField from './screens/battle/battle';
 
 window.onload = () => {
   const startButton = document.getElementsByClassName('outer')[0];
-  //startButton.addEventListener('click', () => addModalTemplate());
+  startButton.addEventListener('click', () => addModalTemplate());
   startButton.addEventListener('click', () => generateGameField());
   startButton.addEventListener('click', () => addHeroTemplate());
   // startButton.addEventListener('click', () => addMonsterTemplate());
-  //startButton.addEventListener('click', () => addCalculatorTaskTemplate());
+  // startButton.addEventListener('click', () => addCalculatorTaskTemplate());
 };

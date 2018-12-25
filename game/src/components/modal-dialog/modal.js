@@ -1,14 +1,20 @@
 import template from './modal-template';
 import './modal.scss';
 
+const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));
+
 export default function addModalTemplate() {
   const bodyContent = document.getElementsByTagName('body')[0];
   bodyContent.innerHTML += template;
-  const inputName = document.getElementById('formGroupExampleInput');
-  const saveChangesModalButton = document.getElementById('save-name');
-  Promise.resolve()
-    .then(() => {
-      localStorage.setItem('key', inputName.value);
-      saveChangesModalButton.addEventListener('DOMContentLoaded', () => console.log('qwe'));
+  delay().then(() => {
+    const inputName = document.getElementById('formGroupExampleInput');
+    const saveChangesModalButton = document.getElementById('save');
+    saveChangesModalButton.addEventListener('click', () => {
+      const heroNamePlace = document.getElementById('hero-name');
+      if (inputName.value) {
+        heroNamePlace.textContent = inputName.value;
+      }
+      localStorage.setItem('name-player', inputName.value);
     });
+  });
 }

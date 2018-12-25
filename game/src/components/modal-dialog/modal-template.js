@@ -19,8 +19,7 @@ export default `
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="save-name">Save changes</button>
+        <button type="button" class="btn btn-secondary" id = "save" data-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>

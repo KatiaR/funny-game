@@ -7,7 +7,9 @@
 .battle-field {
     width: 500px;
     height: 500px;
-    background-color: rgb(194, 191, 191);
+    background-image: url(/screens/battle/images/smow.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
     width: 100%;
     .hero-field {
         width: 30%;
@@ -18,12 +20,16 @@
     .progress {
       margin: 10px 0;
     }
-
+    .button-position {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .playing-field {
     padding: 0;
-    /*background-image: url(./dist/screens/battle/images/smow.png);*/
+   
     width: 100%;
 
   .names-participants {

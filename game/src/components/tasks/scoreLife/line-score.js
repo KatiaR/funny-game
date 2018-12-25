@@ -1,4 +1,5 @@
-export function lifeDuration(scaleLife) {
+export function lifeDuration(type = 'progress-bar-monster') {
+  const scaleLife = document.getElementsByClassName(type)[0];
   const widthLife = getComputedStyle(scaleLife).width;
   const reduceLife = 20;
   const currentValueLife = widthLife - reduceLife;
@@ -6,16 +7,22 @@ export function lifeDuration(scaleLife) {
 }
 
 export default function compaireClientResult(result) {
-  const inputValue = document.getElementsByClassName('form-control')[0].value;
-  if (inputValue === result) {
-    const lifeMonster = document.getElementsByClassName('progress-bar-monster')[0];
-    // const widthMonsterLife = getComputedStyle(lifeMonster).width;
-    // const reduceLife = 20;
-    // const currentValueLife = widthMonsterLife - reduceLife;
-    // lifeMonster.style.width = currentValueLife;
-    lifeDuration(lifeMonster);
-  } else {
-    const lifeHero = document.getElementsByClassName('progress-bar-hero')[0];
-    lifeDuration(lifeHero);
-  }
+  Promise.resolve().then(() => {
+    const inputValue = document.getElementsByClassName('form-control')[0].value;
+    console.log(inputValue);
+    return inputValue;
+  }).then((inputValue) => {
+    if (inputValue === result) {
+      console.log('yes');
+      // const widthMonsterLife = getComputedStyle(lifeMonster).width;
+      // const reduceLife = 20;
+      // const currentValueLife = widthMonsterLife - reduceLife;
+      // lifeMonster.style.width = currentValueLife;
+      lifeDuration();
+    } else {
+      console.log('no');
+      const lifeHero = document.getElementsByClassName('progress-bar-hero')[0];
+      lifeDuration(lifeHero);
+    }
+  });
 }

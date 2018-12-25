@@ -21,5 +21,5 @@ export default function addCalculatorTaskTemplate() {
   const operator = getArithmeticOperator();
   const result = getArithmeticResult(firstNumberTextContent, secondNumberTextContent, operator);
   compaireClientResult(result);
- // calculatorField.hidden = true;
+  // calculatorField.hidden = true;
 }
