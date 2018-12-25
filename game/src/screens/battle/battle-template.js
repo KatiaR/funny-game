@@ -2,8 +2,8 @@ export default `
 
 <section class="battle-field">
   <nav class="navbar navbar-light bg-light">
-  <div class="names-participants"> <a class="navbar-brand" href="#">Hero</a> </div>
-  <div class="names-participants"> <a class="navbar-brand" href="#">Monster</a> </div>
+  <div class="names-participants"> <a class="navbar-brand"  href="#">Hero</a> </div>
+  <div class="names-participants"> <a class="navbar-brand" id = 'monster-name' href="#">Monster</a> </div>
    </nav>
   <div class="d-flex justify-content-around">
     <div class="hero-field">

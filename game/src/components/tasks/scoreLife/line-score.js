@@ -2,7 +2,6 @@ export function lifeDuration(scaleLife) {
   const widthLife = getComputedStyle(scaleLife).width;
   const reduceLife = 20;
   const currentValueLife = widthLife - reduceLife;
-  
   scaleLife.style.width = currentValueLife;
 }
 

@@ -5,8 +5,8 @@ import compaireClientResult from '../scoreLife/line-score';
 
 
 export default function addCalculatorTaskTemplate() {
-  const calculatorField = document.getElementsByClassName('calculator-field')[0];
-  calculatorField.innerHTML += template;
+  const battleField = document.getElementsByClassName('battle-field')[0];
+  battleField.innerHTML += template;
 
   const firstNumber = document.getElementsByClassName('first-number')[0];
   const secondNumber = document.getElementsByClassName('second-number')[0];
@@ -21,5 +21,5 @@ export default function addCalculatorTaskTemplate() {
   const operator = getArithmeticOperator();
   const result = getArithmeticResult(firstNumberTextContent, secondNumberTextContent, operator);
   compaireClientResult(result);
-  calculatorField.hidden = true;
+ // calculatorField.hidden = true;
 }
