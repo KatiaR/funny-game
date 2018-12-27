@@ -184,7 +184,7 @@ body {
 	-webkit-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
 	-moz-box-shadow: inset rgba(0,0,0,0.85) 0px 1px 5px;
 	-webkit-transform: perspective(500px) rotateX(35deg);
-	-moz-transform: perspective(500px) rotateX(35deg);
+	
 }
 .btn-play .outer .height {
 	position: relative;
@@ -199,7 +199,7 @@ body {
 	-webkit-box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
 	-moz-box-shadow: rgba(0,0,0,0.85) 0px 1px 1px, inset rgba(0,0,0,0.35) 0px -2px 8px;
 	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition: all 0.1s ease-in-out;
+	
 }       
 .btn-play:hover .outer .height {
 	margin-top: -10px;

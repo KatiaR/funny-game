@@ -1,23 +1,22 @@
 const min = 0;
-const max = 50;
-
+const max = 20;
 
 export default function randomInteger() {
-  let rand = min + Math.random() * (max + 1 - min);
-  rand = Math.floor(rand);
-  return rand;
+  return Math.floor(min + Math.random() * (max + 1 - min));
 }
 
-export function getArithmeticOperator(firstNumber, secondNumber) {
-  let operator;
-  if (firstNumber > 50) {
+export function getArithmeticOperator(firstNumber) {
+  let operator = '-';
+  console.log(firstNumber);
+  if (firstNumber < (2 * max) / 3) {
     operator = '+';
-  } else if (firstNumber < 10 && secondNumber < 10) {
-    operator = '*';
-  } else {
-    operator = '-';
   }
-  const arithmeticOperator = document.getElementsByClassName('arithmetic-operator')[0];
+  if (firstNumber < max / 3) {
+    operator = '*';
+  }
+  const arithmeticOperator = document.getElementsByClassName(
+    'arithmetic-operator',
+  )[0];
   arithmeticOperator.textContent = operator;
   return operator;
 }
@@ -31,5 +30,6 @@ export function getArithmeticResult(firstNumber, secondNumber, operator) {
   } else if (operator === '-') {
     result = firstNumber - secondNumber;
   }
+  console.log(result);
   return result;
 }

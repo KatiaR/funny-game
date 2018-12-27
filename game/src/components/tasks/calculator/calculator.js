@@ -5,8 +5,9 @@ import compaireClientResult from '../scoreLife/line-score';
 
 
 export default function addCalculatorTaskTemplate() {
-  const battleField = document.getElementsByClassName('battle-field')[0];
-  battleField.innerHTML += template;
+  const madalContentTemplate = document.getElementById('dynamic-content');
+  // madalContentTemplate.textContent = '';
+  madalContentTemplate.innerHTML = template;
 
   const firstNumber = document.getElementsByClassName('first-number')[0];
   const secondNumber = document.getElementsByClassName('second-number')[0];
@@ -17,9 +18,13 @@ export default function addCalculatorTaskTemplate() {
   firstNumber.textContent = firstNumberTextContent;
   secondNumber.textContent = secondNumberTextContent;
 
-  getArithmeticOperator();
-  const operator = getArithmeticOperator();
+  const operator = getArithmeticOperator(firstNumberTextContent, secondNumberTextContent);
+
   const result = getArithmeticResult(firstNumberTextContent, secondNumberTextContent, operator);
-  compaireClientResult(result);
+
+  const btnSave = document.getElementById('save-changes');
+  btnSave.addEventListener('click', () => compaireClientResult(result));
+
+
   // calculatorField.hidden = true;
 }

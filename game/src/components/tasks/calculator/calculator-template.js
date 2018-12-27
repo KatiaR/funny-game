@@ -1,8 +1,5 @@
 export default `
-<div class="modal fade calculator-field" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
+
             <div class="modal-header">
                 <h5 class="modal-title">Enter the result of the calculation</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -23,10 +20,8 @@ export default `
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Save changes</button>
+                <button type="button" class="btn btn-secondary" id = "save-changes" data-dismiss="modal">Save changes</button>
             </div>
-        </div>
-    </div>
-</div>
+        
      
 `;

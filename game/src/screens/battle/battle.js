@@ -1,7 +1,9 @@
 import template from './battle-template';
 import './battle.scss';
-import addCalculatorTaskTemplate from '../../components/tasks/calculator/calculator';
+
 import getMonsterName from '../monster/getMonsterName';
+import addCalculatorTaskTemplate from '../../components/tasks/calculator/calculator';
+
 
 export default function generateGameField() {
   const bodyContent = document.getElementsByTagName('body')[0];
@@ -11,8 +13,12 @@ export default function generateGameField() {
   document.querySelector('.container-fluid').hidden = true;
   bodyContent.classList.add('playing-field');
   bodyContent.innerHTML += template;
-  addCalculatorTaskTemplate();
   const nameMonster = getMonsterName();
 
+  
+  
   Promise.resolve().then(() => { document.getElementById('monster-name').innerHTML = nameMonster; });
+  const spellButton = document.getElementById('btn-spell');
+    console.log(spellButton);
+    spellButton.addEventListener('click', () => addCalculatorTaskTemplate());
 }

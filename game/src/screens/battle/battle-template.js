@@ -17,11 +17,11 @@ export default `
   </div>
     </div>
   </div>
+  
   <div class= "button-position">
-  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  <button type="button" class="btn btn-primary" id = "btn-spell" data-toggle="modal" data-target="#exampleModalCenter">
   Сhoose a spell
 </button>
   </div>
-  
-</section>
+  </section>
 `;
