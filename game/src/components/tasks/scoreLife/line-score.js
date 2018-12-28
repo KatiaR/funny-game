@@ -1,33 +1,28 @@
-const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));
 
-export function lifeDuration(type = 'progress-bar-monster') {
+
+function lifeDuration(type = 'progress-bar-monster') {
   const scaleLife = document.getElementsByClassName(type)[0];
-  const widthLife = getComputedStyle(scaleLife).width;
-  const reduceLife = 20;
+  const widthLife = parseInt(getComputedStyle(scaleLife).width, 10);
+  const reduceLife = 60;
   const currentValueLife = widthLife - reduceLife;
-  scaleLife.style.width = currentValueLife;
+  scaleLife.style.width = `${currentValueLife}px`;
 }
 
 export default function compaireClientResult(result) {
-
-
-  Promise.resolve().then(() => {
-    const inputValue = document.getElementsByClassName('form-control')[0].value;
-    console.log(inputValue);
-    return inputValue;
-  }).then((inputValue) => {
-    if (+inputValue === +result) {
-      console.log('yes');
-      // const widthMonsterLife = getComputedStyle(lifeMonster).width;
-      // const reduceLife = 20;
-      // const currentValueLife = widthMonsterLife - reduceLife;
-      // lifeMonster.style.width = currentValueLife;
-      lifeDuration();
-    } else {
-      console.log('no');
-
-      lifeDuration('progress-bar-hero');
-    }
-  });
-
+  // Promise.resolve().then(() => {
+  //   const inputValue = document.getElementsByClassName('form-control')[0].value;
+  //   return inputValue;
+  // }).then((inputValue) => {
+  //   if (+inputValue === +result) {
+  //     lifeDuration('progress-bar-monster');
+  //   } else {
+  //     lifeDuration('progress-bar-hero');
+  //   }
+  // });
+  const inputValue = document.getElementsByClassName('form-control')[0].value;
+  if (+inputValue === +result) {
+    lifeDuration('progress-bar-monster');
+  } else {
+    lifeDuration('progress-bar-hero');
+  }
 }

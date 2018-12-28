@@ -7,7 +7,6 @@ export default function randomInteger() {
 
 export function getArithmeticOperator(firstNumber) {
   let operator = '-';
-  console.log(firstNumber);
   if (firstNumber < (2 * max) / 3) {
     operator = '+';
   }
@@ -30,6 +29,5 @@ export function getArithmeticResult(firstNumber, secondNumber, operator) {
   } else if (operator === '-') {
     result = firstNumber - secondNumber;
   }
-  console.log(result);
   return result;
 }
