@@ -15,10 +15,9 @@ export default function generateGameField() {
   bodyContent.innerHTML += template;
   const nameMonster = getMonsterName();
 
-  
-  
+
   Promise.resolve().then(() => { document.getElementById('monster-name').innerHTML = nameMonster; });
   const spellButton = document.getElementById('btn-spell');
-    console.log(spellButton);
-    spellButton.addEventListener('click', () => addCalculatorTaskTemplate());
+
+  spellButton.addEventListener('click', () => addCalculatorTaskTemplate());
 }
