@@ -1,12 +1,47 @@
- .monster {
+@keyframes rotateMonster {
+    from {
+        transform: rotate(3deg) translate3d(100px, 40px, 0px);
+    }
+    to {
+        transform: rotate(-10deg);
+        transform: translate3d(150px, 40px, 0px);
+    }
+}
+
+@keyframes rotateMonsterHead {
+    from {
+        transform: rotateX(15deg) rotateY(5deg);
+    }
+    to {
+        transform: rotateX(-15deg) rotateY(-5deg);
+    }
+}
+
+.monster {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-top: 90px;
-   
-
-     & img {
-         width: 30%;
-     }
-
- }
+    animation-duration: 10s;
+    animation-name: rotateMonster;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    & img {
+        width: 30%;
+    }
+    .monster-head,
+    .monster,
+    .monster-feet {
+        animation-duration: 2s;
+        animation-name: rotateMonsterHead;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        
+    }
+    & .monster-head {
+        border-radius: 30%;
+    }
+    .monster-body {
+        margin: -3px 0;
+    }
+}
