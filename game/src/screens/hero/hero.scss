@@ -1,0 +1,78 @@
+@mixin animation {
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rotateHero {
+    from {
+        transform: translate3d(100px, 40px, 0px);
+    }
+    to {
+        transform: translate3d(20px, 40px, 0px);
+    }
+}
+
+@keyframes rotateLeg {
+    from {
+        transform: rotate(3deg);
+    }
+    to {
+        transform: rotate(-15deg);
+    }
+}
+
+
+@keyframes rotateArm {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(30deg);
+    }
+}
+
+.hero {
+    
+    animation-duration: 10s;
+    animation-name: rotateHero;
+    @include animation;
+    .hero-body {
+        position: relative;
+        margin-top: 150px;
+        z-index: 1;
+        animation-duration: 10s;
+            animation-name: rotateArm;
+            @include animation;
+        & img {
+            width: 65%;
+        }
+        .hero-armTop,
+        .hero-armBottom,
+        .hero-tape,
+        .hero-leg {
+            position: absolute;
+        }
+        .hero-armTop {
+            top: 29px;
+            right: 105px;
+            animation-duration: 2s;
+            animation-name: rotateArm;
+            @include animation;
+        }
+        .hero-armBottom {
+            top: 65px;
+            right: 102px;
+            animation-duration: 2s;
+            animation-name: rotateArm;
+            @include animation;
+        }
+       
+        .hero-leg {
+            bottom: 6px;
+            right: 106px;
+            animation-duration: 10s;
+            animation-name: rotateLeg;
+            @include animation;
+        }
+    }
+}
