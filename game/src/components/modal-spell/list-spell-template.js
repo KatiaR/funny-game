@@ -7,7 +7,7 @@ export default `
       </div>
       <div class="modal-body btn-spell">
       <button type="button" id = "arithmetic-task" class="btn btn-outline-primary">Arithmetic task</button>
-      <button type="button" class="btn btn-outline-primary type-spell">Primary</button>
+      <button type="button" id = "vocabularyEnToRus-task" class="btn btn-outline-primary type-spell">Translation en-ru</button>
       <button type="button" class="btn btn-outline-primary type-spell">Primary</button>
       <button type="button" class="btn btn-outline-primary type-spell">Primary</button>
       <button type="button" class="btn btn-outline-primary type-spell">Primary</button>

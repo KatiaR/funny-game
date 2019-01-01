@@ -11,7 +11,7 @@ function addGameWinnerTemplate() {
   madalContentTemplate.innerHTML = templateWinner;
 }
 
-function lifeDuration(type = 'progress-bar-monster') {
+export function lifeDuration(type = 'progress-bar-monster') {
   const scaleLife = document.getElementsByClassName(type)[0];
   const widthLife = parseInt(getComputedStyle(scaleLife).width, 10);
   const reduceLife = 60;
