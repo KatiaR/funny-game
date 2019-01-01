@@ -10,7 +10,17 @@ const combinationsMonsterBody = [
   ['./screens/monster/images/foot1.png', './screens/monster/images/foot2.png', './screens/monster/images/foot3.png'],
 ];
 
+const vocabularyEnToRu = [
+  ['Привет', 'Hello'],
+  ['Обезьяна', 'monkey'],
+  ['Апельсин', 'orange'],
+  ['Тарелка', 'plate'],
+  ['Книга', 'book'],
+  ['мышь', 'mouse'],
+];
+
 module.exports = {
   combinationsMonsterName,
   combinationsMonsterBody,
+  vocabularyEnToRu,
 };

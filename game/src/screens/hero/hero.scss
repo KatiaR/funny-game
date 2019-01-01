@@ -21,7 +21,6 @@
     }
 }
 
-
 @keyframes rotateArm {
     from {
         transform: rotateX(0deg);
@@ -32,7 +31,6 @@
 }
 
 .hero {
-    
     animation-duration: 10s;
     animation-name: rotateHero;
     @include animation;
@@ -41,8 +39,8 @@
         margin-top: 150px;
         z-index: 1;
         animation-duration: 10s;
-            animation-name: rotateArm;
-            @include animation;
+        animation-name: rotateArm;
+        @include animation;
         & img {
             width: 65%;
         }
@@ -66,7 +64,6 @@
             animation-name: rotateArm;
             @include animation;
         }
-       
         .hero-leg {
             bottom: 6px;
             right: 106px;
