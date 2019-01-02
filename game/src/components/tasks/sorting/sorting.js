@@ -1,5 +1,7 @@
 import template from './sorting-template';
 import './sorting.scss';
+import addDataToSortingTask from './sorting-utils';
+import { lifeDuration } from '../scoreLife/line-score';
 
 function allowDrop(e) {
   e.preventDefault();
@@ -18,9 +20,11 @@ function drop(e) {
 function lettersDrop() {
   const listItems = document.querySelector('.sorting-task');
   const placeSortItems = document.querySelector('.empty');
+
   listItems.addEventListener('dragstart', e => drag(e));
   listItems.addEventListener('drop', e => drop(e));
   listItems.addEventListener('dragover', e => allowDrop(e));
+
   placeSortItems.addEventListener('dragstart', e => drag(e));
   placeSortItems.addEventListener('drop', e => drop(e));
   placeSortItems.addEventListener('dragover', e => allowDrop(e));
@@ -28,9 +32,20 @@ function lettersDrop() {
 
 
 export default function addSortingTaskTemplate() {
-  const madalContentTemplate = document.getElementById('dynamic-content');
-  madalContentTemplate.innerHTML = template;
+  const modalContentTemplate = document.getElementById('dynamic-content');
+  let answerClientArr = [];
+  modalContentTemplate.innerHTML = template;
   lettersDrop();
-  //const btnSave = document.getElementById('save-changes');
-  //btnSave.addEventListener('click', () => {} );
+  const givenStrOrderLetters = addDataToSortingTask();
+  const btnSave = document.getElementById('save-changes');
+  btnSave.addEventListener('click', () => {
+    const answerClient = document.querySelectorAll('.answer-place');
+    answerClientArr = [...answerClient].map(({ textContent }) => textContent);
+    const strOrderAnswerClient = answerClientArr.join('');
+    if (strOrderAnswerClient.localeCompare(givenStrOrderLetters) === 0) {
+      lifeDuration('progress-bar-monster');
+    } else {
+      lifeDuration('progress-bar-hero');
+    }
+  });
 }

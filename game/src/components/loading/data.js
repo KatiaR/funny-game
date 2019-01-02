@@ -37,3 +37,5 @@ export const vocabularyEnToRu = [
   },
 
 ];
+
+export const sortLetters = ['ertuo', 'dfghj', 'yhjki', 'qwedf', 'olkju'];

@@ -8,19 +8,19 @@ export default `
             </div>
             <div class="modal-body sorting-task">
                <div class="sort-items">
-               <span draggable="true" data-number = "0" id = "item0">a</span>
+               <span class = "items" draggable="true" data-number = "0" id = "item0"></span>
                </div>
                <div class="sort-items">
-               <span draggable="true" data-number = "1" id = "item1">b</span>
+               <span class = "items" draggable="true" data-number = "1" id = "item1"></span>
                </div>
                <div class="sort-items">
-               <span draggable="true" data-number = "2" id = "item2">n</span>
+               <span class = "items" draggable="true" data-number = "2" id = "item2"></span>
                </div>
                <div class="sort-items">
-               <span draggable="true" data-number = "3" id = "item3">x</span>
+               <span class = "items" draggable="true" data-number = "3" id = "item3"></span>
                </div>
                <div class="sort-items">
-               <span draggable="true" data-number = "4" id = "item4">g</span>
+               <span class = "items" draggable="true" data-number = "4" id = "item4"></span>
                </div>
             </div>
             <div class="empty">
