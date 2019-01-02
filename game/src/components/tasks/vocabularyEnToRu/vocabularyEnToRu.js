@@ -4,7 +4,7 @@ import { vocabularyEnToRu } from '../../loading/data';
 import randomInteger from '../utils';
 import { lifeDuration } from '../scoreLife/line-score';
 
-const max = 6;
+const max = 5;
 const min = 0;
 
 export default function translateEnWord() {

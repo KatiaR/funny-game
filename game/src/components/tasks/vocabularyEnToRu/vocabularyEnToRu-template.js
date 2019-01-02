@@ -7,7 +7,7 @@ export default `
             </div>
             <div class="modal-body vocabulary">
                 <div class = "vocabularyEnToRu">
-                        <p id = "en-word">Word</p>
+                        <p id = "en-word"></p>
                 </div>
                 <div class="input-group mb-3">
                     <input type="text" id ="client-answer" class="form-control" placeholder="Your result" aria-label="Your result"
