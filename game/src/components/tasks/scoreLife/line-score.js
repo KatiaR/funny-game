@@ -13,10 +13,10 @@ function addGameWinnerTemplate() {
 
 export function lifeDuration(type = 'progress-bar-monster') {
   const scaleLife = document.getElementsByClassName(type)[0];
-  const widthLife = parseInt(getComputedStyle(scaleLife).width, 10);
-  const reduceLife = 60;
+  const widthLife = parseInt(scaleLife.style.width, 10);
+  const reduceLife = 20;
   const currentValueLife = widthLife - reduceLife;
-  scaleLife.style.width = `${currentValueLife}px`;
+  scaleLife.style.width = `${currentValueLife}%`;
   return currentValueLife;
 }
 
