@@ -39,3 +39,31 @@ export const vocabularyEnToRu = [
 ];
 
 export const sortLetters = ['ertuo', 'dfghj', 'yhjki', 'qwedf', 'olkju'];
+
+export const vocabularyRuToEn = [
+  {
+    rus: 'Кот',
+    eng: ['cat', 'gib'],
+  },
+  {
+    rus: 'Стол',
+    eng: ['table', 'desk'],
+  },
+  {
+    rus: 'Дверь',
+    eng: ['door', 'entry'],
+  },
+  {
+    rus: 'Человек',
+    eng: ['person', 'human', 'man', 'fellow'],
+  },
+  {
+    rus: 'Гриб',
+    eng: ['mushroom', 'fungus', 'boletus'],
+  },
+  {
+    rus: 'Слон',
+    eng: ['elephant', 'bishop'],
+  },
+
+];

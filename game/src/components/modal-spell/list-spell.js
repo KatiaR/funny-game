@@ -4,6 +4,7 @@ import addCalculatorTaskTemplate from '../tasks/calculator/calculator';
 import translateEnWord from '../tasks/vocabularyEnToRu/vocabularyEnToRu';
 import addSortingTaskTemplate from '../tasks/sorting/sorting';
 import addCompareTaskTemplate from '../tasks/comparison/comparison';
+import translateRuWord from '../tasks/vocabularyRuToEn/vocabularyRuToEn';
 
 export default function addListSpellTemplate() {
   const madalContentTemplate = document.getElementById('dynamic-content');
@@ -20,4 +21,7 @@ export default function addListSpellTemplate() {
 
   const compareSpell = document.getElementById('compare-task');
   compareSpell.addEventListener('click', () => addCompareTaskTemplate());
+
+  const vocabularyRuToEnSpell = document.getElementById('vocabularyRuToEn-task');
+  vocabularyRuToEnSpell.addEventListener('click', () => translateRuWord());
 }

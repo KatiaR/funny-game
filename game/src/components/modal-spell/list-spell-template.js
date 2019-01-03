@@ -10,7 +10,7 @@ export default `
       <button type="button" id = "vocabularyEnToRus-task" class="btn btn-outline-primary type-spell">Translation en-ru</button>
       <button type="button" id = "sorting-task"  class="btn btn-outline-primary type-spell">Sorting task</button>
       <button type="button" id = "compare-task"  class="btn btn-outline-primary type-spell">Compare task</button>
-      <button type="button" class="btn btn-outline-primary type-spell">Primary</button>
+      <button type="button" id = "vocabularyRuToEn-task"  class="btn btn-outline-primary type-spell">Translation ru-en</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id = "save" data-dismiss="modal">Save changes</button>
