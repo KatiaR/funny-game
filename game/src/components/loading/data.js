@@ -67,3 +67,13 @@ export const vocabularyRuToEn = [
   },
 
 ];
+
+export const extraWord = [
+  ['Cat', 'Dog', 'Table'],
+  ['Green', 'Desk', 'Gray'],
+  ['Very', 'Hot', 'Easy'],
+  ['Eyes', 'Legs', 'Nose'],
+  ['Jump', 'Eat', 'Run'],
+  ['House', 'Chair', 'Ear'],
+];
+export const extraWordAnswer = ['Table', 'Desk', 'Very', 'Nose', 'Eat', 'Ear'];

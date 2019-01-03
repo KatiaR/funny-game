@@ -11,6 +11,7 @@ export default `
       <button type="button" id = "sorting-task"  class="btn btn-outline-primary type-spell">Sorting task</button>
       <button type="button" id = "compare-task"  class="btn btn-outline-primary type-spell">Compare task</button>
       <button type="button" id = "vocabularyRuToEn-task"  class="btn btn-outline-primary type-spell">Translation ru-en</button>
+      <button type="button" id = "extraWord-task"  class="btn btn-outline-primary type-spell">Extra words</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id = "save" data-dismiss="modal">Save changes</button>
