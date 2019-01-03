@@ -8,12 +8,12 @@ const max = 5;
 const min = 0;
 
 export default function translateEnWord() {
-  const madalContentTemplate = document.getElementById('dynamic-content');
-  madalContentTemplate.innerHTML = template;
+  const modalContentTemplate = document.getElementById('dynamic-content');
+  modalContentTemplate.innerHTML = template;
 
-  const placeEnword = document.getElementById('en-word');
+  const placeEnWord = document.getElementById('en-word');
   const currentWordPair = vocabularyEnToRu[randomInteger(max, min)];
-  placeEnword.textContent = currentWordPair.eng;
+  placeEnWord.textContent = currentWordPair.eng;
 
   const btnSave = document.getElementById('save-changes');
   btnSave.addEventListener('click', () => {

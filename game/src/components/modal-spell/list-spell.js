@@ -3,6 +3,7 @@ import './list-spell.scss';
 import addCalculatorTaskTemplate from '../tasks/calculator/calculator';
 import translateEnWord from '../tasks/vocabularyEnToRu/vocabularyEnToRu';
 import addSortingTaskTemplate from '../tasks/sorting/sorting';
+import addCompareTaskTemplate from '../tasks/comparison/comparison';
 
 export default function addListSpellTemplate() {
   const madalContentTemplate = document.getElementById('dynamic-content');
@@ -16,4 +17,7 @@ export default function addListSpellTemplate() {
 
   const sortingSpell = document.getElementById('sorting-task');
   sortingSpell.addEventListener('click', () => addSortingTaskTemplate());
+
+  const compareSpell = document.getElementById('compare-task');
+  compareSpell.addEventListener('click', () => addCompareTaskTemplate());
 }

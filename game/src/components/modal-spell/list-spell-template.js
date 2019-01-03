@@ -9,7 +9,7 @@ export default `
       <button type="button" id = "arithmetic-task" class="btn btn-outline-primary type-spell">Arithmetic task</button>
       <button type="button" id = "vocabularyEnToRus-task" class="btn btn-outline-primary type-spell">Translation en-ru</button>
       <button type="button" id = "sorting-task"  class="btn btn-outline-primary type-spell">Sorting task</button>
-      <button type="button" class="btn btn-outline-primary type-spell">Primary</button>
+      <button type="button" id = "compare-task"  class="btn btn-outline-primary type-spell">Compare task</button>
       <button type="button" class="btn btn-outline-primary type-spell">Primary</button>
       </div>
       <div class="modal-footer">

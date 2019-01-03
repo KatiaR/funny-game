@@ -5,7 +5,7 @@ export default `
   <div class="names-participants"> <a class="navbar-brand" id = 'hero-name'  href="#">Hero</a> </div>
   <div class="names-participants"> <a class="navbar-brand" id = 'monster-name' href="#">Monster</a> </div>
    </nav>
-  <div class="d-flex justify-content-around">
+  <div class="d-flex justify-content-around participants-place">
     <div class="hero-field">
     <div class="progress">
     <div class="progress-bar progress-bar-hero" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
