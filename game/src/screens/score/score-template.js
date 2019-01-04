@@ -10,7 +10,7 @@ export default `
                 <table>
 <tr>
   <th>Player name</th>
-  <th>Points</th>
+  <th>Dead monsters</th>
 </tr>
 </table>
 </div>

@@ -80,4 +80,4 @@ export const extraWordAnswer = ['Table', 'Desk', 'Very', 'Nose', 'Eat', 'Ear'];
 
 
 export const scorePlayers = [];
-export const dataPlayer = {};
+

@@ -12,7 +12,8 @@ export default function addScoreTableTemplate() {
     storageData = [...JSON.parse(dataPlayerStorage)];
   }
   const totalScore = scorePlayers.reduce((acc, el) => acc + el, 0);
-  const player = { name: nameHero || 'Hero', score: totalScore || 'no points' };
+  const pointTorKillMonster = 25;
+  const player = { name: nameHero || 'Hero', score: Math.floor(totalScore / pointTorKillMonster) || 'the monster is alive' };
   storageData.push(player);
   localStorage.setItem('data-player', JSON.stringify(storageData));
   if (storageData.length) {

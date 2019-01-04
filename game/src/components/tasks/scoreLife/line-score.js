@@ -2,21 +2,16 @@ import template from './game-over-template';
 import templateWinner from './game-winner-template';
 import { scoring } from '../utils';
 
-function addGameOverTemplate() {
+export function addGameOverTemplate() {
   const modalContentTemplate = document.getElementById('dynamic-content');
   modalContentTemplate.innerHTML = template;
 }
 
-function addGameWinnerTemplate() {
-  const madalContentTemplate = document.getElementById('dynamic-content');
-  madalContentTemplate.innerHTML = templateWinner;
+export function addGameWinnerTemplate() {
+  const modalContentTemplate = document.getElementById('dynamic-content');
+  modalContentTemplate.innerHTML = templateWinner;
 }
-// export function scoring() {
-//   const scoreTask = 5;
-//   scorePlayers.push(scoreTask);
-//   console.log(scorePlayers);
-//   // return scorePlayers;
-// }
+
 
 export function lifeDuration(type = 'progress-bar-monster') {
   const scaleLife = document.getElementsByClassName(type)[0];
@@ -28,7 +23,7 @@ export function lifeDuration(type = 'progress-bar-monster') {
 }
 
 
-export default function compaireClientResult(result) {
+export default function compareClientResult(result) {
   const inputValue = document.getElementsByClassName('form-control')[0].value;
   if (+inputValue === +result) {
     lifeDuration('progress-bar-monster');
@@ -36,4 +31,10 @@ export default function compaireClientResult(result) {
   } else {
     lifeDuration('progress-bar-hero');
   }
+}
+export function newlifeDuration(type = 'progress-bar-monster') {
+  const scaleLife = document.getElementsByClassName(type)[0];
+  const currentValueLife = 100;
+  scaleLife.style.width = `${currentValueLife}%`;
+  return currentValueLife;
 }

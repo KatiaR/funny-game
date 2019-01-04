@@ -1,12 +1,12 @@
 import template from './calculator-template';
 import './calculator.scss';
 import randomInteger, { getArithmeticOperator, getArithmeticResult } from './calculator-utils';
-import compaireClientResult from '../scoreLife/line-score';
+import compareClientResult from '../scoreLife/line-score';
 
 
 export default function addCalculatorTaskTemplate() {
-  const madalContentTemplate = document.getElementById('dynamic-content');
-  madalContentTemplate.innerHTML = template;
+  const modalContentTemplate = document.getElementById('dynamic-content');
+  modalContentTemplate.innerHTML = template;
 
   const firstNumber = document.getElementsByClassName('first-number')[0];
   const secondNumber = document.getElementsByClassName('second-number')[0];
@@ -22,5 +22,5 @@ export default function addCalculatorTaskTemplate() {
   const result = getArithmeticResult(firstNumberTextContent, secondNumberTextContent, operator);
 
   const btnSave = document.getElementById('save-changes');
-  btnSave.addEventListener('click', () => compaireClientResult(result));
+  btnSave.addEventListener('click', () => compareClientResult(result));
 }
