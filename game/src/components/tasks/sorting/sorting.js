@@ -2,6 +2,7 @@ import template from './sorting-template';
 import './sorting.scss';
 import addDataToSortingTask from './sorting-utils';
 import { lifeDuration } from '../scoreLife/line-score';
+import { scoring } from '../utils';
 
 function allowDrop(e) {
   e.preventDefault();
@@ -44,6 +45,7 @@ export default function addSortingTaskTemplate() {
     const strOrderAnswerClient = answerClientArr.join('');
     if (strOrderAnswerClient.localeCompare(givenStrOrderLetters) === 0) {
       lifeDuration('progress-bar-monster');
+      scoring();
     } else {
       lifeDuration('progress-bar-hero');
     }

@@ -1,6 +1,6 @@
 import template from './extraWord-template';
 import { extraWord, extraWordAnswer } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { scoring } from '../utils';
 import './extraWord.scss';
 
 import { lifeDuration } from '../scoreLife/line-score';
@@ -30,6 +30,7 @@ export default function chooseExtraWord() {
 
       if (extraWordAnswer.includes(answerPlayer)) {
         lifeDuration('progress-bar-monster');
+        scoring();
       } else {
         lifeDuration('progress-bar-hero');
       }

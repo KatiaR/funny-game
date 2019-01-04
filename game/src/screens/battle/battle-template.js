@@ -23,5 +23,9 @@ export default `
   Сhoose a spell
 </button>
   </div>
+   <button type="button" class="btn btn-primary" id = "btn-score" data-toggle="modal" data-target="#exampleModalCenter">
+  
+Results table
+</button>
   </section>
 `;

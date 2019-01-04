@@ -77,3 +77,7 @@ export const extraWord = [
   ['House', 'Chair', 'Ear'],
 ];
 export const extraWordAnswer = ['Table', 'Desk', 'Very', 'Nose', 'Eat', 'Ear'];
+
+
+export const scorePlayers = [];
+export const dataPlayer = {};

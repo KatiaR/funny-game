@@ -1,7 +1,7 @@
 import template from './vocabularyEnToRu-template';
 
 import { vocabularyEnToRu } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { scoring } from '../utils';
 import { lifeDuration } from '../scoreLife/line-score';
 
 const max = 5;
@@ -20,6 +20,7 @@ export default function translateEnWord() {
     const clientAnswer = document.getElementById('client-answer').value.toLowerCase();
     if (currentWordPair.rus.includes(clientAnswer)) {
       lifeDuration('progress-bar-monster');
+      scoring();
     } else {
       lifeDuration('progress-bar-hero');
     }

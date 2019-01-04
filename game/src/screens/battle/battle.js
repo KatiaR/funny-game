@@ -1,9 +1,9 @@
 import template from './battle-template';
 import './battle.scss';
-
 import getMonsterName from '../monster/getMonsterName';
-
 import addListSpellTemplate from '../../components/modal-spell/list-spell';
+import addScoreTableTemplate from '../score/score';
+
 
 export default function generateGameField() {
   const bodyContent = document.getElementsByTagName('body')[0];
@@ -20,4 +20,7 @@ export default function generateGameField() {
   const spellButton = document.getElementById('btn-spell');
 
   spellButton.addEventListener('click', () => addListSpellTemplate());
+
+  const resultBtn = document.getElementById('btn-score');
+  resultBtn.addEventListener('click', () => addScoreTableTemplate());
 }

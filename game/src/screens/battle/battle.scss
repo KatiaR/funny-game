@@ -4,37 +4,52 @@
 
 html {
   margin: 0 auto;
+  max-width: 1600px;
+  min-width: 1100px;
 
   .playing-field {
     margin: 0 auto;
     padding: 0;
     background-image: url("./screens/battle/images/fiels.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: center;
+
 
     .battle-field {
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      height: 100vh;
+      overflow: hidden;
 
       .navbar {
         width: 100%;
+        padding: 0;
+        justify-content: space-around;
+
+        & a {
+          margin: 0;
+        }
 
         .names-participants {
           display: flex;
           justify-content: center;
-          width: 45%;
+          width: 30%;
+
         }
       }
 
       .participants-place {
+        height: 100%;
+
         .hero-field {
           width: 30%;
-          height: 90%;
+          height: 100%;
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+
         }
 
         .monster-field {
@@ -55,7 +70,10 @@ html {
       }
     }
 
-
+#btn-score {
+  position: absolute;
+  bottom: 30px;
+}
   }
 
 }

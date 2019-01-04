@@ -1,6 +1,7 @@
 import template from './modal-template';
 import './modal.scss';
 
+
 const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));
 
 export default function addModalTemplate() {
@@ -14,7 +15,6 @@ export default function addModalTemplate() {
       if (inputName.value) {
         heroNamePlace.textContent = inputName.value;
       }
-      localStorage.setItem('name-player', inputName.value);
     });
   });
 }
