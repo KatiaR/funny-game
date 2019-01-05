@@ -81,3 +81,29 @@ export const extraWordAnswer = ['Table', 'Desk', 'Very', 'Nose', 'Eat', 'Ear'];
 
 export const scorePlayers = [];
 
+export const capital = [
+  {
+    question: 'What is the capital of the Belgium?',
+    answer: 'brussels',
+  },
+  {
+    question: 'What is the capital of the Bulgaria?',
+    answer: 'sofia',
+  },
+  {
+    question: 'What is the capital of the Czech Republic?',
+    answer: 'prague',
+  },
+  {
+    question: 'What is the capital of the Estonia?',
+    answer: 'tallinn',
+  },
+  {
+    question: 'What is the capital of the France?',
+    answer: 'paris',
+  },
+  {
+    question: 'What is the capital of the Germany?',
+    answer: 'berlin',
+  },
+]

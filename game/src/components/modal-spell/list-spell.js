@@ -6,6 +6,8 @@ import addSortingTaskTemplate from '../tasks/sorting/sorting';
 import addCompareTaskTemplate from '../tasks/comparison/comparison';
 import translateRuWord from '../tasks/vocabularyRuToEn/vocabularyRuToEn';
 import chooseExtraWord from '../tasks/extraWords/extraWord';
+import writeCapital from '../tasks/capital/capital';
+
 
 export default function addListSpellTemplate() {
   const madalContentTemplate = document.getElementById('dynamic-content');
@@ -28,4 +30,7 @@ export default function addListSpellTemplate() {
 
   const extraWordSpell = document.getElementById('extraWord-task');
   extraWordSpell.addEventListener('click', () => chooseExtraWord());
+
+  const capitalSpell = document.getElementById('capital');
+  capitalSpell.addEventListener('click', () => writeCapital());
 }

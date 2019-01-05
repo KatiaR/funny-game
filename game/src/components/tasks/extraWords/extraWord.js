@@ -5,7 +5,7 @@ import './extraWord.scss';
 
 import { lifeDuration } from '../scoreLife/line-score';
 
-const max = 5;
+const max = extraWord.length - 1;
 const min = 0;
 
 export default function chooseExtraWord() {
@@ -13,27 +13,22 @@ export default function chooseExtraWord() {
   modalContentTemplate.innerHTML = template;
 
   const placeWord = document.querySelectorAll('.sequence');
+  const inputValue = document.querySelectorAll('input[name="answer"]');
   const currentExtraWord = extraWord[randomInteger(max, min)];
 
-  [...placeWord].forEach((elem, i) => {
-    elem.textContent = currentExtraWord[i]; // eslint-disable-line no-param-reassign
+  currentExtraWord.forEach((elem, i) => {
+    placeWord[i].textContent = elem; // eslint-disable-line no-param-reassign
+    inputValue[i].value = elem; // eslint-disable-line no-param-reassign
   });
 
-  const boxPlaceWord = document.querySelector('.extra-word');
-
-  boxPlaceWord.addEventListener('click', (e) => {
-    e.target.classList.toggle('active');
-    const btnSave = document.getElementById('save-changes');
-
-    btnSave.addEventListener('click', () => {
-      const answerPlayer = e.target.textContent;
-
-      if (extraWordAnswer.includes(answerPlayer)) {
-        lifeDuration('progress-bar-monster');
-        scoring();
-      } else {
-        lifeDuration('progress-bar-hero');
-      }
-    });
+  // const boxPlaceWord = document.querySelector('.extra-word');
+  const btnSave = document.getElementById('save-changes');
+  btnSave.addEventListener('click', () => {
+    if (extraWordAnswer.includes(document.forms[0].elements.answer.value)) {
+      lifeDuration('progress-bar-monster');
+      scoring();
+    } else {
+      lifeDuration('progress-bar-hero');
+    }
   });
 }

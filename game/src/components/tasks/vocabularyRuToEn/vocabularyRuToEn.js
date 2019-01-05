@@ -4,7 +4,7 @@ import { vocabularyRuToEn } from '../../loading/data';
 import randomInteger, { scoring } from '../utils';
 import { lifeDuration } from '../scoreLife/line-score';
 
-const max = 5;
+const max = vocabularyRuToEn.length - 1;
 const min = 0;
 
 export default function translateRuWord() {

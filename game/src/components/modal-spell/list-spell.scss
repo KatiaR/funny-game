@@ -4,3 +4,32 @@
         width: 150px;
     }
 }
+.modal-header {
+    padding: 5px 30px;
+}
+.setting {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
+    margin: 10px 30px;
+
+    .option, .type {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        & .btn-treat {
+            margin-left: -13px;
+        }
+    }
+    h6 {
+        margin: 0;
+    }
+    .btn {
+       margin: 5px 0;
+        width: 120px;
+
+    }
+
+
+}

@@ -6,10 +6,16 @@ export default `
                 </button>
             </div>
             <div class="modal-body extra-word">
-                <p class = "sequence"></p>
-                <p class = "sequence"></p>
-                <p class = "sequence"></p>
-            </div>
+             <form class="form-group form-check answer">
+                 <input type="radio" class="form-check-input answer" id="exampleCheck1" name = "answer">
+                 <label class="form-check-label sequence " for="exampleCheck1"></label>
+                 <input type="radio" class="form-check-input answer" id="exampleCheck2" name = "answer">
+                 <label class="form-check-label sequence" for="exampleCheck2"></label>
+                 <input type="radio" class="form-check-input answer" id="exampleCheck3" name = "answer">
+                 <label class="form-check-label sequence" for="exampleCheck3"></label>
+             </form>
+             </div>
+            
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" id = "save-changes" data-dismiss="modal">Save changes</button>
             </div>

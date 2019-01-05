@@ -1,7 +1,7 @@
 import { sortLetters } from '../../loading/data';
 import randomInteger from '../utils';
 
-const max = 4;
+const max = sortLetters.length - 1;
 const min = 0;
 
 export default function addDataToSortingTask() {

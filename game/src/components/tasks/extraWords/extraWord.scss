@@ -2,19 +2,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .sequence {
-    width: 100px;
-    border: 1px solid grey;
-    padding: 5px;
-    margin: 0 5px;
-cursor: pointer;
-    &:hover {
-      box-shadow: 0 0 25px 7px #3209f7;
+  flex-direction: column;
+  .answer {
+    & label {
+      margin-right: 30px;
     }
-      }
-  .active {
-    box-shadow: 0 0 20px 7px #3209f7;
-    color: green;
   }
 }
