@@ -7,6 +7,7 @@ import addCompareTaskTemplate from '../tasks/comparison/comparison';
 import translateRuWord from '../tasks/vocabularyRuToEn/vocabularyRuToEn';
 import chooseExtraWord from '../tasks/extraWords/extraWord';
 import writeCapital from '../tasks/capital/capital';
+import addSequence from '../tasks/sequence/sequence';
 
 
 export default function addListSpellTemplate() {
@@ -33,4 +34,7 @@ export default function addListSpellTemplate() {
 
   const capitalSpell = document.getElementById('capital');
   capitalSpell.addEventListener('click', () => writeCapital());
+
+  const sequenceSpell = document.getElementById('sequence');
+  sequenceSpell.addEventListener('click', () => addSequence());
 }

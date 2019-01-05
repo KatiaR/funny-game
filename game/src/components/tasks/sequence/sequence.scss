@@ -1,0 +1,35 @@
+
+
+.sequence {
+  & ul {
+    margin:0;
+    padding:0;
+
+    & li {
+    cursor:move;
+    display:block;
+      width: 50%;
+      text-align: center;
+      border-radius: 35%;
+    padding:10px 5px;
+    background:white;
+    border-bottom:solid 1px gray;
+  }
+  }
+}
+.clear-border {
+  border-bottom: 0;
+  border-top: 0;
+}
+
+.add-border {
+  border-bottom: solid 4px blue;
+  border-top: 0;
+}
+
+.empty-border {
+  border-bottom: 0;
+}
+.empty-border-top {
+  border-top: 0;
+}

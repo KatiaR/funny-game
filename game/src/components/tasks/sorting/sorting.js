@@ -2,21 +2,10 @@ import template from './sorting-template';
 import './sorting.scss';
 import addDataToSortingTask from './sorting-utils';
 import { lifeDuration } from '../scoreLife/line-score';
-import { scoring } from '../utils';
+import {
+  scoring, allowDrop, drop, drag,
+} from '../utils';
 
-function allowDrop(e) {
-  e.preventDefault();
-}
-
-function drag(e) {
-  e.dataTransfer.setData('text', e.target.id);
-}
-
-function drop(e) {
-  e.preventDefault();
-  const data = e.dataTransfer.getData('text');
-  e.target.appendChild(document.getElementById(data));
-}
 
 function lettersDrop() {
   const listItems = document.querySelector('.sorting-task');

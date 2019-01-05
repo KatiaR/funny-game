@@ -106,4 +106,5 @@ export const capital = [
     question: 'What is the capital of the Germany?',
     answer: 'berlin',
   },
-]
+];
+
