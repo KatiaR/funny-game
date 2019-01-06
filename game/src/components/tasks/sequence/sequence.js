@@ -1,13 +1,22 @@
 import template from './sequence-template';
 import { lifeDuration } from '../scoreLife/line-score';
 import './sequence.scss';
+import randomInteger, { scoring } from '../utils';
+
+const max = 50;
+const min = 0;
 
 
 export default function addSequence() {
   const modalContentTemplate = document.getElementById('dynamic-content');
   modalContentTemplate.innerHTML = template;
 
+
   const listItems = document.querySelector('.sequence');
+  const itemsText = document.querySelectorAll('.sortable');
+  [...itemsText].forEach((elem) => {
+    elem.textContent = randomInteger(max, min);
+  });
 
   let dragging = null;
 
@@ -38,6 +47,21 @@ export default function addSequence() {
     } else {
       event.target.classList.add('empty-border-top');
       event.target.parentNode.insertBefore(dragging, event.target);
+    }
+  });
+
+  const btnSave = document.getElementById('save-changes');
+  btnSave.addEventListener('click', () => {
+    const clientAnswer = document.querySelectorAll('.sortable');
+    const valuesClientAnswer = [...clientAnswer].map(e => +e.textContent);
+    const sortedArray = [...valuesClientAnswer].sort((a, b) => a - b);
+    const arraysIsEqual = valuesClientAnswer.every((elem, index) => elem === sortedArray[index]);
+    if (arraysIsEqual) {
+      lifeDuration('progress-bar-monster');
+      scoring();
+    } else {
+      lifeDuration('progress-bar-hero');
+      scoring();
     }
   });
 }
