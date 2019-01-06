@@ -1,32 +1,40 @@
 import './score.scss';
 import template from './score-template';
 import { scorePlayers } from '../../components/loading/data';
+import { database } from '../../app';
 
 export default function addScoreTableTemplate() {
-  const modalContentTemplate = document.getElementById('dynamic-content');
-  modalContentTemplate.innerHTML = template;
-  const nameHero = document.getElementById('hero-name').textContent;
-  let storageData = [];
-  if (localStorage.getItem('data-player')) {
-    const dataPlayerStorage = localStorage.getItem('data-player');
-    storageData = [...JSON.parse(dataPlayerStorage)];
-  }
-  const totalScore = scorePlayers.reduce((acc, el) => acc + el, 0);
-  const pointTorKillMonster = 25;
-  const player = { name: nameHero || 'Hero', score: Math.floor(totalScore / pointTorKillMonster) || 'the monster is alive' };
-  storageData.push(player);
-  localStorage.setItem('data-player', JSON.stringify(storageData));
-  if (storageData.length) {
-    const table = document.querySelector('.score table');
-    storageData.forEach((elem) => {
-      const tr = document.createElement('tr');
-      const td1 = document.createElement('td');
-      const td2 = document.createElement('td');
-      td1.innerText = elem.name;
-      td2.innerText = elem.score;
-      tr.appendChild(td1);
-      tr.appendChild(td2);
-      table.appendChild(tr);
-    });
-  }
+  database.ref('/results')
+    .once('value')
+    .then((snapshot) => {
+      const modalContentTemplate = document.getElementById('dynamic-content');
+      modalContentTemplate.innerHTML = template;
+      const nameHero = document.getElementById('hero-name').textContent;
+      let storageData = snapshot.val();
+      if (!storageData) { return; }
+      const totalScore = scorePlayers.reduce((acc, el) => acc + el, 0);
+      const pointTorKillMonster = 25;
+      const player = { name: nameHero || 'Hero', score: Math.floor(totalScore / pointTorKillMonster) || 0 };
+      storageData.push(player);
+      storageData.sort((a, b) => b.score - a.score);
+      storageData = storageData.slice(0, 10);
+      const table = document.querySelector('.score table');
+      storageData.forEach((elem) => {
+        const tr = document.createElement('tr');
+        const td1 = document.createElement('td');
+        const td2 = document.createElement('td');
+        td1.innerText = elem.name;
+        td2.innerText = elem.score;
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        table.appendChild(tr);
+      });
+      return storageData;
+    }).then((res) => {
+      if (res) {
+        database.ref('/results').set(res)
+          .catch(e => console.log(e));
+      }
+    })
+    .catch(e => console.log(e));
 }
