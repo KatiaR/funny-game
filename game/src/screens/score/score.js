@@ -1,9 +1,16 @@
+import $ from 'jquery';
 import './score.scss';
 import template from './score-template';
 import { scorePlayers } from '../../components/loading/data';
-import { database } from '../../app';
+import database from '../../db';
+import generateGameField from '../battle/battle';
+import addHeroTemplate from '../hero/hero';
+import addMonsterTemplate from '../monster/monster';
+
+const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));
 
 export default function addScoreTableTemplate() {
+  delay(500).then(() => { $('#exampleModalCenter').modal('show'); });
   database.ref('/results')
     .once('value')
     .then((snapshot) => {
@@ -11,7 +18,7 @@ export default function addScoreTableTemplate() {
       modalContentTemplate.innerHTML = template;
       const nameHero = document.getElementById('hero-name').textContent;
       let storageData = snapshot.val();
-      if (!storageData) { return; }
+      if (!storageData) { return null; }
       const totalScore = scorePlayers.reduce((acc, el) => acc + el, 0);
       const pointTorKillMonster = 25;
       const player = { name: nameHero || 'Hero', score: Math.floor(totalScore / pointTorKillMonster) || 0 };
@@ -29,6 +36,13 @@ export default function addScoreTableTemplate() {
         tr.appendChild(td2);
         table.appendChild(tr);
       });
+
+
+      const btnPlayAgain = document.getElementById('btn-new-game');
+      btnPlayAgain.addEventListener('click', () => {
+        window.location.reload();
+      });
+
       return storageData;
     }).then((res) => {
       if (res) {

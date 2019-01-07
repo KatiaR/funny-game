@@ -30,6 +30,13 @@ module.exports = {
         }],
       },
       {
+        test: /\.mp3$/,
+        loader: 'file-loader',
+        query: {
+          name: './audio/[name].[hash:8].[ext]',
+        },
+      },
+      {
         test: /\.scss$/,
         use: [
           {
@@ -67,6 +74,10 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: 'src/**/*.png',
+      to: '',
+      transformPath: targetPath => targetPath.replace('src/', ''),
+    }, {
+      from: 'src/**/*.mp3',
       to: '',
       transformPath: targetPath => targetPath.replace('src/', ''),
     }], { debug: 'info' }),

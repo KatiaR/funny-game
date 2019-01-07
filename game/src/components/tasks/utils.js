@@ -1,6 +1,6 @@
 import { scorePlayers } from '../loading/data';
 import addMonsterTemplate from '../../screens/monster/monster';
-import { newlifeDuration } from './scoreLife/line-score';
+import { newLifeDuration } from './scoreLife/line-score';
 
 export default function randomInteger(max, min) {
   return Math.floor(min + Math.random() * (max + 1 - min));
@@ -16,7 +16,7 @@ export function scoring() {
     const parent = document.querySelector('.monster-field');
     parent.removeChild(child);
     addMonsterTemplate();
-    newlifeDuration();
+    newLifeDuration();
   }
 }
 

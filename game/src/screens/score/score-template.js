@@ -13,6 +13,9 @@ export default `
   <th>Dead monsters</th>
 </tr>
 </table>
+<button type="button" class="btn btn-secondary close" data-dismiss="modal" aria-label="Close" id = "btn-new-game">
+Start again
+</button>
 </div>
            
 `;

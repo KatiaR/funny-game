@@ -3,15 +3,15 @@ import templateWinner from './game-winner-template';
 import { scoring } from '../utils';
 import addScoreTableTemplate from '../../../screens/score/score';
 
-export function addGameOverTemplate() {
-  const modalContentTemplate = document.getElementById('dynamic-content');
-  modalContentTemplate.innerHTML = template;
-}
+// export function addGameOverTemplate() {
+//   const modalContentTemplate = document.getElementById('dynamic-content');
+//   modalContentTemplate.innerHTML = template;
+// }
 
-export function addGameWinnerTemplate() {
-  const modalContentTemplate = document.getElementById('dynamic-content');
-  modalContentTemplate.innerHTML = templateWinner;
-}
+// export function addGameWinnerTemplate() {
+//   const modalContentTemplate = document.getElementById('dynamic-content');
+//   modalContentTemplate.innerHTML = templateWinner;
+// }
 
 
 export function lifeDuration(type = 'progress-bar-monster') {
@@ -22,12 +22,10 @@ export function lifeDuration(type = 'progress-bar-monster') {
   scaleLife.style.width = `${currentValueLife}%`;
   const liveHero = document.getElementsByClassName('progress-bar-hero')[0];
   if (parseInt(liveHero.style.width, 10) <= 0) {
-    addGameOverTemplate();
     addScoreTableTemplate();
   }
   return currentValueLife;
 }
-
 
 export default function compareClientResult(result) {
   const inputValue = document.getElementsByClassName('form-control')[0].value;
@@ -38,7 +36,7 @@ export default function compareClientResult(result) {
     lifeDuration('progress-bar-hero');
   }
 }
-export function newlifeDuration(type = 'progress-bar-monster') {
+export function newLifeDuration(type = 'progress-bar-monster') {
   const scaleLife = document.getElementsByClassName(type)[0];
   const currentValueLife = 100;
   scaleLife.style.width = `${currentValueLife}%`;

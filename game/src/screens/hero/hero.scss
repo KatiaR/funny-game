@@ -8,6 +8,15 @@
     }
 }
 
+@keyframes flyFire {
+    from {
+        transform: translate3d(0px, 40px, 0px) rotateX(0deg) rotate(3deg) scale(0.5, 0.5);;
+    }
+    to {
+        transform: translate3d(400px, 40px, 0px) rotateX(40deg) rotate(-25deg) scale(3, 3);;
+    }
+}
+
 .hero {
     animation-duration: 10s;
     animation-name: rotateHero;
@@ -20,3 +29,15 @@ margin-top: 230px;
         }
 
 }
+#fire-hero {
+    display: none;
+    position: absolute;
+    width: 20%;
+    right: 0px;
+    animation-duration: 5s;
+    animation-name: flyFire;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    z-index: 5;
+}
+
