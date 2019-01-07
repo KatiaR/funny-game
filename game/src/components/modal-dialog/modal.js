@@ -1,5 +1,4 @@
 import template from './modal-template';
-import './modal.scss';
 
 
 const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));

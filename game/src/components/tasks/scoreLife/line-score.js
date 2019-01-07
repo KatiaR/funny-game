@@ -1,6 +1,7 @@
 import template from './game-over-template';
 import templateWinner from './game-winner-template';
 import { scoring } from '../utils';
+import addScoreTableTemplate from '../../../screens/score/score';
 
 export function addGameOverTemplate() {
   const modalContentTemplate = document.getElementById('dynamic-content');
@@ -19,6 +20,11 @@ export function lifeDuration(type = 'progress-bar-monster') {
   const reduceLife = 20;
   const currentValueLife = widthLife - reduceLife;
   scaleLife.style.width = `${currentValueLife}%`;
+  const liveHero = document.getElementsByClassName('progress-bar-hero')[0];
+  if (parseInt(liveHero.style.width, 10) <= 0) {
+    addGameOverTemplate();
+    addScoreTableTemplate();
+  }
   return currentValueLife;
 }
 

@@ -17,7 +17,7 @@ const config = {
   messagingSenderId: '484257344953',
 };
 firebase.initializeApp(config);
-const database = firebase.database();
+export const database = firebase.database();
 export default {
   database,
 };
@@ -27,7 +27,5 @@ window.onload = () => {
   startButton.addEventListener('click', () => addModalTemplate());
   startButton.addEventListener('click', () => generateGameField());
   startButton.addEventListener('click', () => addHeroTemplate());
-  // spellButton.addEventListener('click', () => addCalculatorTaskTemplate());
   startButton.addEventListener('click', () => addMonsterTemplate());
-  // startButton.addEventListener('click', () => addCalculatorTaskTemplate());
 };

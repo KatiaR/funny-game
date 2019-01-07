@@ -6,8 +6,9 @@ export default `
         </button>
     </div>
     <div class="modal-body game-over">
-       <img class="lost-player" src="./images/game-over.png" alt = "Game over"/>
+       <img class="lost-player" src="./components/tasks/scoreLife/images/game-over.png" alt = "Game over"/>
     </div>
+    
     <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id = "save-changes" data-dismiss="modal">Close</button>
     </div>

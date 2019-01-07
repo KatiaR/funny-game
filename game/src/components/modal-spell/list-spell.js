@@ -11,8 +11,8 @@ import addSequence from '../tasks/sequence/sequence';
 
 
 export default function addListSpellTemplate() {
-  const madalContentTemplate = document.getElementById('dynamic-content');
-  madalContentTemplate.innerHTML = template;
+  const modalContentTemplate = document.getElementById('dynamic-content');
+  modalContentTemplate.innerHTML = template;
 
   const arithmeticSpell = document.getElementById('arithmetic-task');
   arithmeticSpell.addEventListener('click', () => addCalculatorTaskTemplate());
