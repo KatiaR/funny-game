@@ -1,0 +1,15 @@
+#img {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  .img-exceptions {
+    &:hover  {
+      box-shadow: -7px -1px 57px 0px #0d80c3;
+    }
+  }
+  .active {
+    box-shadow: -7px -1px 57px 0px #0d80c3;
+    border: 1px solid black;
+  }
+}
+

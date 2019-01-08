@@ -42,7 +42,8 @@ export default `
       <button type="button" id = "animals"  class="btn btn-outline-primary type-spell">Animal task</button>
       <button type="button" id = "article"  class="btn btn-outline-primary type-spell">Articles task</button>
       <button type="button" id = "riddles"  class="btn btn-outline-primary type-spell">Riddles task</button>
-      
+      <button type="button" id = "exceptions"  class="btn btn-outline-primary type-spell">Exceptions task</button>
+     <button type="button" id = "fruits"  class="btn btn-outline-primary type-spell">Fruits task</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id = "save" data-dismiss="modal">Save changes</button>

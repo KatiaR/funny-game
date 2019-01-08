@@ -201,3 +201,65 @@ export const riddles = [
     answer: 'cat',
   },
 ];
+export const exceptionsImg = [
+  {
+    question: 'Choose green item',
+    img: [
+      './components/tasks/exceptions/image/img5.png',
+      './components/tasks/exceptions/image/img4.png',
+      './components/tasks/exceptions/image/img1.png'],
+    answer: './components/tasks/exceptions/image/img5.png',
+  },
+  {
+    question: 'Choose heavy item',
+    img: [
+      './components/tasks/exceptions/image/img2.png',
+      './components/tasks/exceptions/image/img4.png',
+      './components/tasks/exceptions/image/img7.png'],
+    answer: './components/tasks/exceptions/image/img2.png',
+  },
+  {
+    question: 'Choose clothes',
+    img: [
+      './components/tasks/exceptions/image/img3.png',
+      './components/tasks/exceptions/image/img1.png',
+      './components/tasks/exceptions/image/img7.png'],
+    answer: './components/tasks/exceptions/image/img1.png',
+  },
+  {
+    question: 'Choose transport',
+    img: [
+      './components/tasks/exceptions/image/img6.png',
+      './components/tasks/exceptions/image/img3.png',
+      './components/tasks/exceptions/image/img2.png'],
+    answer: './components/tasks/exceptions/image/img3.png',
+  },
+
+];
+export const fruits = [
+  {
+
+    img: './components/tasks/fruits/image/apple.png',
+    answer: 'apple',
+  },
+  {
+
+    img: './components/tasks/fruits/image/banana.png',
+    answer: 'banana',
+  },
+  {
+
+    img: './components/tasks/fruits/image/lemon.png',
+    answer: 'lemon',
+  },
+  {
+
+    img: './components/tasks/fruits/image/orange.png',
+    answer: 'orange',
+  },
+  {
+
+    img: './components/tasks/fruits/image/pear.png',
+    answer: 'pear',
+  },
+];

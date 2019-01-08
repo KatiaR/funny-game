@@ -13,6 +13,8 @@ import writeDifferences from '../tasks/concepts/concepts';
 import writeAnimal from '../tasks/animals/animal';
 import chooseArticle from '../tasks/articles/articles';
 import guessRiddle from '../tasks/riddles/riddles';
+import chooseExceptionsImg from '../tasks/exceptions/exceptions';
+import writeFruit from '../tasks/fruits/fruits';
 
 export default function addListSpellTemplate() {
   const modalContentTemplate = document.getElementById('dynamic-content');
@@ -56,4 +58,10 @@ export default function addListSpellTemplate() {
 
   const riddlesSpell = document.getElementById('riddles');
   riddlesSpell.addEventListener('click', () => guessRiddle());
+
+  const exceptionsSpell = document.getElementById('exceptions');
+  exceptionsSpell.addEventListener('click', () => chooseExceptionsImg());
+
+  const fruitsSpell = document.getElementById('fruits');
+  fruitsSpell.addEventListener('click', () => writeFruit());
 }
