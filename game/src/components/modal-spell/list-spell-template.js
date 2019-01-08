@@ -37,6 +37,8 @@ export default `
       <button type="button" id = "extraWord-task"  class="btn btn-outline-primary type-spell">Extra words</button>
       <button type="button" id = "capital"  class="btn btn-outline-primary type-spell">Capitals task</button>
       <button type="button" id = "sequence"  class="btn btn-outline-primary type-spell">Sequence task</button>
+      <button type="button" id = "education"  class="btn btn-outline-primary type-spell">General education</button>
+      <button type="button" id = "figures"  class="btn btn-outline-primary type-spell">Concepts task</button>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" id = "save" data-dismiss="modal">Save changes</button>

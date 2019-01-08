@@ -8,7 +8,8 @@ import translateRuWord from '../tasks/vocabularyRuToEn/vocabularyRuToEn';
 import chooseExtraWord from '../tasks/extraWords/extraWord';
 import writeCapital from '../tasks/capital/capital';
 import addSequence from '../tasks/sequence/sequence';
-
+import writeMonths from '../tasks/easy/easy';
+import writeDifferences from '../tasks/concepts/concepts';
 
 export default function addListSpellTemplate() {
   const modalContentTemplate = document.getElementById('dynamic-content');
@@ -37,4 +38,10 @@ export default function addListSpellTemplate() {
 
   const sequenceSpell = document.getElementById('sequence');
   sequenceSpell.addEventListener('click', () => addSequence());
+
+  const monthSpell = document.getElementById('education');
+  monthSpell.addEventListener('click', () => writeMonths());
+
+  const conceptsSpell = document.getElementById('figures');
+  conceptsSpell.addEventListener('click', () => writeDifferences());
 }

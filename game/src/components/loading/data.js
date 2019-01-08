@@ -107,3 +107,47 @@ export const capital = [
     answer: 'berlin',
   },
 ];
+
+export const months = [
+  {
+    question: 'December, January, ...',
+    answer: 'february',
+  },
+  {
+    question: 'March, April, ...?',
+    answer: 'may',
+  },
+  {
+    question: 'June, July, ...?',
+    answer: 'august',
+  },
+  {
+    question: 'September, October, ...?',
+    answer: 'november',
+  },
+  {
+    question: 'Day, months, ...?',
+    answer: 'year',
+  },
+  {
+    question: 'Summer, Autumn, Winter, ... ?',
+    answer: 'spring',
+  },
+];
+export const figures = [
+  {
+    question: 'What is the difference between the depicted figures?(form, color, size)?',
+    img: './components/tasks/concepts/image/img1.png',
+    answer: 'form',
+  },
+  {
+    question: 'What is the difference between the depicted figures(form, color, size)?',
+    img: './components/tasks/concepts/image/img2.png',
+    answer: 'color',
+  },
+  {
+    question: 'What is the difference between the depicted figures(form, color, size)?',
+    img: './components/tasks/concepts/image/img4.png',
+    answer: 'form',
+  },
+];
