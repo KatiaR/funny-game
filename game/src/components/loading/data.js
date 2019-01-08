@@ -151,3 +151,35 @@ export const figures = [
     answer: 'form',
   },
 ];
+export const animals = [
+  {
+    question: 'What is the animal?',
+    img: './components/tasks/animals/image/cat.png',
+    answer: 'cat',
+  },
+  {
+    question: 'What is the animal?',
+    img: './components/tasks/animals/image/dog.png',
+    answer: 'dog',
+  },
+  {
+    question: 'What is the animal?',
+    img: './components/tasks/animals/image/fox.png',
+    answer: 'fox',
+  },
+  {
+    question: 'What is the animal?',
+    img: './components/tasks/animals/image/mouse.png',
+    answer: 'mouse',
+  },
+  {
+    question: 'What is the animal?',
+    img: './components/tasks/animals/image/panter.png',
+    answer: 'panther',
+  },
+  {
+    question: 'What is the animal?',
+    img: './components/tasks/animals/image/tiger.png',
+    answer: 'tiger',
+  },
+];

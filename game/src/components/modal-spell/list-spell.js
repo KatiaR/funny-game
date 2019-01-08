@@ -10,6 +10,7 @@ import writeCapital from '../tasks/capital/capital';
 import addSequence from '../tasks/sequence/sequence';
 import writeMonths from '../tasks/easy/easy';
 import writeDifferences from '../tasks/concepts/concepts';
+import writeAnimal from '../tasks/animals/animal';
 
 export default function addListSpellTemplate() {
   const modalContentTemplate = document.getElementById('dynamic-content');
@@ -44,4 +45,7 @@ export default function addListSpellTemplate() {
 
   const conceptsSpell = document.getElementById('figures');
   conceptsSpell.addEventListener('click', () => writeDifferences());
+
+  const animalSpell = document.getElementById('animals');
+  animalSpell.addEventListener('click', () => writeAnimal());
 }
