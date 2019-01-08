@@ -9,6 +9,9 @@ const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));
 
 export default function addScoreTableTemplate() {
   delay(500).then(() => { $('#exampleModalCenter').modal('show'); });
+  delay(1500).then(() => {
+    $('#exampleModalCenter').on('hidden.bs.modal', () => window.location.reload());
+  });
   database.ref('/results')
     .once('value')
     .then((snapshot) => {

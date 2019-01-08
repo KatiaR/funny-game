@@ -3,7 +3,8 @@ $color-black: #000000;
 .calculator-field {
     .arithmetic-task {
         display: flex;
-        flex-direction: column;
+        padding: 30px 0;
+        justify-content: center;
         .arithmetic-example {
             display: flex;
             justify-content: center;
