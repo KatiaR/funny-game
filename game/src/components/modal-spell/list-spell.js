@@ -11,6 +11,8 @@ import addSequence from '../tasks/sequence/sequence';
 import writeMonths from '../tasks/easy/easy';
 import writeDifferences from '../tasks/concepts/concepts';
 import writeAnimal from '../tasks/animals/animal';
+import chooseArticle from '../tasks/articles/articles';
+import guessRiddle from '../tasks/riddles/riddles';
 
 export default function addListSpellTemplate() {
   const modalContentTemplate = document.getElementById('dynamic-content');
@@ -48,4 +50,10 @@ export default function addListSpellTemplate() {
 
   const animalSpell = document.getElementById('animals');
   animalSpell.addEventListener('click', () => writeAnimal());
+
+  const articleSpell = document.getElementById('article');
+  articleSpell.addEventListener('click', () => chooseArticle());
+
+  const riddlesSpell = document.getElementById('riddles');
+  riddlesSpell.addEventListener('click', () => guessRiddle());
 }

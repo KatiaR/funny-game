@@ -1,18 +1,18 @@
-import template from './capital-template';
-import { capital } from '../../loading/data';
+import template from './riddles-template';
+import { riddles } from '../../loading/data';
 import randomInteger from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
-const max = capital.length - 1;
+const max = riddles.length - 1;
 const min = 0;
 
-export default function writeCapital() {
+export default function guessRiddle() {
   const modalContentTemplate = document.getElementById('dynamic-content');
   modalContentTemplate.innerHTML = template;
 
-  const placeWord = document.getElementById('answer');
-  const currentWordPair = capital[randomInteger(max, min)];
-  placeWord.textContent = currentWordPair.question;
+  const placeEnWord = document.getElementById('riddle');
+  const currentWordPair = riddles[randomInteger(max, min)];
+  placeEnWord.textContent = currentWordPair.question;
 
   const btnSave = document.getElementById('save-changes');
   btnSave.addEventListener('click', () => {

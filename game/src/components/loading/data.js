@@ -3,13 +3,11 @@ export const combinationsMonsterName = [
   ['Огр', 'Гном', 'Тролль', 'Варвар', 'Гоблин', 'Эльф', 'Леший', 'Гном', 'Тролль', 'Варвар', 'Гоблин', 'Эльф', 'Леший'],
   ['Степа', 'Вася', 'Петя', 'Том', 'Макс', 'Арсений', 'Маврикий', 'Аким', 'Кеша', 'Вова', 'Федя', 'Миша'],
 ];
-
 export const combinationsMonsterBody = [
   ['./screens/monster/images/head1.png', './screens/monster/images/head2.png', './screens/monster/images/head3.png'],
   ['./screens/monster/images/body3.png', './screens/monster/images/body2.png', './screens/monster/images/body1.png'],
   ['./screens/monster/images/foot1.png', './screens/monster/images/foot2.png', './screens/monster/images/foot3.png'],
 ];
-
 export const vocabularyEnToRu = [
   {
     eng: 'Hello',
@@ -37,9 +35,7 @@ export const vocabularyEnToRu = [
   },
 
 ];
-
 export const sortLetters = ['ertuo', 'dfghj', 'yhjki', 'qwedf', 'olkju'];
-
 export const vocabularyRuToEn = [
   {
     rus: 'Кот',
@@ -67,7 +63,6 @@ export const vocabularyRuToEn = [
   },
 
 ];
-
 export const extraWord = [
   ['Cat', 'Dog', 'Table'],
   ['Green', 'Desk', 'Gray'],
@@ -77,10 +72,7 @@ export const extraWord = [
   ['House', 'Chair', 'Ear'],
 ];
 export const extraWordAnswer = ['Table', 'Desk', 'Very', 'Nose', 'Eat', 'Ear'];
-
-
 export const scorePlayers = [];
-
 export const capital = [
   {
     question: 'What is the capital of the Belgium?',
@@ -107,7 +99,6 @@ export const capital = [
     answer: 'berlin',
   },
 ];
-
 export const months = [
   {
     question: 'December, January, ...',
@@ -181,5 +172,32 @@ export const animals = [
     question: 'What is the animal?',
     img: './components/tasks/animals/image/tiger.png',
     answer: 'tiger',
+  },
+];
+export const articleWords = [
+  [' a egg', 'an egg'],
+  ['an umbrella', 'a umbrella'],
+  ['an hour', 'a hour'],
+  ['an apple', 'a apple'],
+  ['a book', 'an book'],
+  ['an cat', 'a cat'],
+];
+export const articleWordsdAnswers = ['an egg', 'an umbrella', 'an hour', 'an apple', 'a book', 'a cat'];
+export const riddles = [
+  {
+    question: 'A very long nose. It grows and grows. He is huge and likes fun. It\'s ... ',
+    answer: 'elephant',
+  },
+  {
+    question: 'I have 4 legs and a long tail. I like to run fast. I let you ride on my back. I eat hay. I am …',
+    answer: 'horse',
+  },
+  {
+    question: 'I have 4 legs and a tail. I am very smart. I like to play with you. When I see a cat, I say «Woof, woof». I am …',
+    answer: 'dog',
+  },
+  {
+    question: 'I am a pet. I am soft and furry. I like to sleep and drink milk. I don’t like dogs. I say «Meow, meow». I am …',
+    answer: 'cat',
   },
 ];

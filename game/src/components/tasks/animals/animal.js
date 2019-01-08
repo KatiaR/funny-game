@@ -21,7 +21,7 @@ export default function writeAnimal() {
   const btnSave = document.getElementById('save-changes');
   btnSave.addEventListener('click', () => {
     const clientAnswer = document.getElementById('client-answer').value.toLowerCase();
-    if (currentWordPair.answer.includes(clientAnswer)) {
+    if (currentWordPair.answer.includes(clientAnswer) && clientAnswer) {
       addSpellAndSoundHero();
     } else {
       addSpellAndSoundMonster();
