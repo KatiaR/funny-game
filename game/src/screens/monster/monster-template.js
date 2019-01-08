@@ -1,7 +1,6 @@
 export default `
 <div class = "monster">
-<audio id = "sound-monster" src="./screens/monster/audio/Sound.light.mp3">Your browser does not support the audio element. </audio>
-<img id = "storm" class ="slideLeftFire" src="./screens/monster/images/Storm.png" alt="monster-fire" />
+<img  class ="storm hidden" src="./screens/monster/images/Storm.png" alt="monster-fire" />
 <div class = "monster-head monster-part">
 <img id = "head" src="" alt="head of monster" />
 </div>

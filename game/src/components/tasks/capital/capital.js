@@ -1,7 +1,7 @@
 import template from './capital-template';
 import { capital } from '../../loading/data';
-import randomInteger, { scoring } from '../utils';
-import { lifeDuration } from '../scoreLife/line-score';
+import randomInteger from '../utils';
+import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = capital.length - 1;
 const min = 0;
@@ -18,10 +18,9 @@ export default function writeCapital() {
   btnSave.addEventListener('click', () => {
     const clientAnswer = document.getElementById('client-answer').value.toLowerCase();
     if (currentWordPair.answer.includes(clientAnswer)) {
-      lifeDuration('progress-bar-monster');
-      scoring();
+      addSpellAndSoundHero();
     } else {
-      lifeDuration('progress-bar-hero');
+      addSpellAndSoundMonster();
     }
   });
 }

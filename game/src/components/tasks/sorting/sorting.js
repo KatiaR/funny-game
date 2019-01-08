@@ -1,9 +1,9 @@
 import template from './sorting-template';
 import './sorting.scss';
 import addDataToSortingTask from './sorting-utils';
-import { lifeDuration } from '../scoreLife/line-score';
+import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 import {
-  scoring, allowDrop, drop, drag,
+  allowDrop, drop, drag,
 } from '../utils';
 
 
@@ -33,10 +33,9 @@ export default function addSortingTaskTemplate() {
     answerClientArr = [...answerClient].map(({ textContent }) => textContent);
     const strOrderAnswerClient = answerClientArr.join('');
     if (strOrderAnswerClient.localeCompare(givenStrOrderLetters) === 0) {
-      lifeDuration('progress-bar-monster');
-      scoring();
+      addSpellAndSoundHero();
     } else {
-      lifeDuration('progress-bar-hero');
+      addSpellAndSoundMonster();
     }
   });
 }

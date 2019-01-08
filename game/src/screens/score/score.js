@@ -3,9 +3,7 @@ import './score.scss';
 import template from './score-template';
 import { scorePlayers } from '../../components/loading/data';
 import database from '../../db';
-import generateGameField from '../battle/battle';
-import addHeroTemplate from '../hero/hero';
-import addMonsterTemplate from '../monster/monster';
+
 
 const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));
 

@@ -1,7 +1,7 @@
 import template from './comparison-template';
 import './comparison.scss';
-import randomInteger, { scoring } from '../utils';
-import { lifeDuration } from '../scoreLife/line-score';
+import randomInteger from '../utils';
+import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 
 const max = 50;
@@ -25,16 +25,13 @@ export default function addCompareTaskTemplate() {
     const clientAnswer = document.getElementById('client-answer').value;
 
     if (clientAnswer === '>' && firstNumberTextContent > secondNumberTextContent) {
-      lifeDuration('progress-bar-monster');
-      scoring();
+      addSpellAndSoundHero();
     } else if (clientAnswer === '<' && firstNumberTextContent < secondNumberTextContent) {
-      lifeDuration('progress-bar-monster');
-      scoring();
+      addSpellAndSoundHero();
     } else if (clientAnswer === '=' && firstNumberTextContent === secondNumberTextContent) {
-      lifeDuration('progress-bar-monster');
-      scoring();
+      addSpellAndSoundHero();
     } else {
-      lifeDuration('progress-bar-hero');
+      addSpellAndSoundMonster();
     }
   });
 }

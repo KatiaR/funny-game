@@ -1,9 +1,8 @@
 import template from './extraWord-template';
 import { extraWord, extraWordAnswer } from '../../loading/data';
-import randomInteger, { scoring } from '../utils';
+import randomInteger from '../utils';
 import './extraWord.scss';
-
-import { lifeDuration } from '../scoreLife/line-score';
+import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = extraWord.length - 1;
 const min = 0;
@@ -25,10 +24,9 @@ export default function chooseExtraWord() {
   const btnSave = document.getElementById('save-changes');
   btnSave.addEventListener('click', () => {
     if (extraWordAnswer.includes(document.forms[0].elements.answer.value)) {
-      lifeDuration('progress-bar-monster');
-      scoring();
+      addSpellAndSoundHero();
     } else {
-      lifeDuration('progress-bar-hero');
+      addSpellAndSoundMonster();
     }
   });
 }

@@ -1,9 +1,16 @@
 import { scorePlayers } from '../loading/data';
 import addMonsterTemplate from '../../screens/monster/monster';
-import { newLifeDuration } from './scoreLife/line-score';
+
 
 export default function randomInteger(max, min) {
   return Math.floor(min + Math.random() * (max + 1 - min));
+}
+
+export function newLifeDuration(type = 'progress-bar-monster') {
+  const scaleLife = document.getElementsByClassName(type)[0];
+  const currentValueLife = 100;
+  scaleLife.style.width = `${currentValueLife}%`;
+  return currentValueLife;
 }
 
 export function scoring() {
@@ -32,4 +39,10 @@ export function drop(e) {
   e.preventDefault();
   const data = e.dataTransfer.getData('text');
   e.target.appendChild(document.getElementById(data));
+}
+
+export function spellType(type) {
+  const spellPlayer = document.getElementsByClassName(type)[0];
+  spellPlayer.classList.toggle('hidden');
+  setTimeout(() => { spellPlayer.classList.toggle('hidden'); }, 1500);
 }

@@ -1,43 +1,48 @@
-
 @keyframes rotateHero {
-    from {
-        transform: translate3d(100px, 40px, 0px) rotateX(0deg) rotate(3deg);
-    }
-    to {
-        transform: translate3d(20px, 40px, 0px) rotateX(30deg) rotate(-5deg);
-    }
+  from {
+    transform: translate3d(100px, 40px, 0px) rotateX(0deg) rotate(3deg);
+  }
+  to {
+    transform: translate3d(20px, 40px, 0px) rotateX(30deg) rotate(-5deg);
+  }
 }
 
 @keyframes flyFire {
-    from {
-        transform: translate3d(0px, 40px, 0px) rotateX(0deg) rotate(3deg) scale(0.5, 0.5);;
-    }
-    to {
-        transform: translate3d(400px, 40px, 0px) rotateX(40deg) rotate(-25deg) scale(3, 3);;
-    }
+  from {
+    transform: translate3d(150px, 0px, 0px) rotateX(0deg) rotate(-55deg) scale(0.2, 0.2);;
+  }
+  to {
+    transform: translate3d(500px, 0px, 0px) rotateX(20deg) rotate(-3deg) scale(1, 1);;
+  }
 }
 
 .hero {
-    animation-duration: 10s;
-    animation-name: rotateHero;
+  animation-duration: 10s;
+  animation-name: rotateHero;
 
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-margin-top: 230px;
-        & img {
-            width: 95%;
-        }
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin-top: 230px;
+
+  & img {
+    width: 95%;
+  }
 
 }
-#fire-hero {
-    display: none;
-    position: absolute;
-    width: 20%;
-    right: 0px;
-    animation-duration: 5s;
-    animation-name: flyFire;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-    z-index: 5;
+
+.fire-hero {
+
+  position: absolute;
+  width: 5%;
+  right: 0;
+  top: -100px;
+  animation-duration: 3s;
+  animation-name: flyFire;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  z-index: 5;
 }
 
+.hidden {
+  display: none;
+}

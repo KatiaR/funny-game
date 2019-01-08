@@ -1,7 +1,7 @@
 import template from './sequence-template';
-import { lifeDuration } from '../scoreLife/line-score';
+import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 import './sequence.scss';
-import randomInteger, { scoring } from '../utils';
+import randomInteger from '../utils';
 
 const max = 50;
 const min = 0;
@@ -57,11 +57,9 @@ export default function addSequence() {
     const sortedArray = [...valuesClientAnswer].sort((a, b) => a - b);
     const arraysIsEqual = valuesClientAnswer.every((elem, index) => elem === sortedArray[index]);
     if (arraysIsEqual) {
-      lifeDuration('progress-bar-monster');
-      scoring();
+      addSpellAndSoundHero();
     } else {
-      lifeDuration('progress-bar-hero');
-      scoring();
+      addSpellAndSoundMonster();
     }
   });
 }

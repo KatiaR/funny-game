@@ -1,17 +1,6 @@
-import template from './game-over-template';
-import templateWinner from './game-winner-template';
-import { scoring } from '../utils';
+
+import { spellType, scoring } from '../utils';
 import addScoreTableTemplate from '../../../screens/score/score';
-
-// export function addGameOverTemplate() {
-//   const modalContentTemplate = document.getElementById('dynamic-content');
-//   modalContentTemplate.innerHTML = template;
-// }
-
-// export function addGameWinnerTemplate() {
-//   const modalContentTemplate = document.getElementById('dynamic-content');
-//   modalContentTemplate.innerHTML = templateWinner;
-// }
 
 
 export function lifeDuration(type = 'progress-bar-monster') {
@@ -24,21 +13,29 @@ export function lifeDuration(type = 'progress-bar-monster') {
   if (parseInt(liveHero.style.width, 10) <= 0) {
     addScoreTableTemplate();
   }
+
   return currentValueLife;
 }
 
+export function addSpellAndSoundHero() {
+  lifeDuration('progress-bar-monster');
+  scoring();
+  spellType('fire-hero');
+  const audio = new Audio('../screens/hero/audio/Sound.storm.mp3');
+  audio.play();
+}
+
+export function addSpellAndSoundMonster() {
+  lifeDuration('progress-bar-hero');
+  spellType('storm');
+  const audio = new Audio('../screens/monster/audio/Sound.light.mp3');
+  audio.play();
+}
 export default function compareClientResult(result) {
   const inputValue = document.getElementsByClassName('form-control')[0].value;
   if (+inputValue === +result) {
-    lifeDuration('progress-bar-monster');
-    scoring();
+    addSpellAndSoundHero();
   } else {
-    lifeDuration('progress-bar-hero');
+    addSpellAndSoundMonster();
   }
-}
-export function newLifeDuration(type = 'progress-bar-monster') {
-  const scaleLife = document.getElementsByClassName(type)[0];
-  const currentValueLife = 100;
-  scaleLife.style.width = `${currentValueLife}%`;
-  return currentValueLife;
 }
