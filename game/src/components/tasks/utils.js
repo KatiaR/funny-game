@@ -46,3 +46,14 @@ export function spellType(type) {
   spellPlayer.classList.toggle('hidden');
   setTimeout(() => { spellPlayer.classList.toggle('hidden'); }, 1500);
 }
+
+export function keyBoardEnter() {
+  document.getElementById('client-answer')
+    .addEventListener('keyup', (event) => {
+      event.preventDefault();
+      const keyboardENTER = 13;
+      if (event.keyCode === keyboardENTER) {
+        document.getElementById('save-changes').click();
+      }
+    });
+}

@@ -1,6 +1,6 @@
 import { fruits } from '../../loading/data';
 import template from './fruits-template';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 
@@ -26,4 +26,5 @@ export default function writeFruit() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

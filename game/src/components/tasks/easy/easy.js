@@ -1,6 +1,6 @@
 import template from './easy-template';
 import { months } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = months.length - 1;
@@ -23,4 +23,5 @@ export default function writeMonths() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

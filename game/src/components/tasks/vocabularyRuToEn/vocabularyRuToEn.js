@@ -1,6 +1,6 @@
 import template from './vocabularyRuToEn-template';
 import { vocabularyRuToEn } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = vocabularyRuToEn.length - 1;
@@ -23,4 +23,5 @@ export default function translateRuWord() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

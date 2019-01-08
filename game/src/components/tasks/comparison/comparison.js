@@ -1,6 +1,6 @@
 import template from './comparison-template';
 import './comparison.scss';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 
@@ -34,4 +34,5 @@ export default function addCompareTaskTemplate() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

@@ -1,6 +1,6 @@
 import template from './vocabularyEnToRu-template';
 import { vocabularyEnToRu } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = vocabularyEnToRu.length - 1;
@@ -23,4 +23,5 @@ export default function translateEnWord() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

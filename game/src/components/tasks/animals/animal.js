@@ -1,6 +1,6 @@
 import template from './animal-template';
 import { animals } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 import './animal.scss';
 
@@ -27,4 +27,5 @@ export default function writeAnimal() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

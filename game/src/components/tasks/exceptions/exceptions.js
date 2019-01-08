@@ -1,6 +1,6 @@
 import template from './exceptions-template';
 import { exceptionsImg } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import './exceptions.scss';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
@@ -34,4 +34,5 @@ export default function chooseExceptionsImg() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

@@ -1,6 +1,6 @@
 import template from './concepts-template';
 import { figures } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = figures.length - 1;
@@ -26,4 +26,5 @@ export default function writeDifferences() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

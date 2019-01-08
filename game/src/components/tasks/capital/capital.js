@@ -1,6 +1,6 @@
 import template from './capital-template';
 import { capital } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = capital.length - 1;
@@ -23,4 +23,5 @@ export default function writeCapital() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

@@ -8,7 +8,9 @@ import database from '../../db';
 const delay = (ms = 10) => new Promise(res => setTimeout(() => res(), ms));
 
 export default function addScoreTableTemplate() {
-  delay(500).then(() => { $('#exampleModalCenter').modal('show'); });
+  delay(500).then(() => {
+    $('#exampleModalCenter').modal('show');
+  });
   delay(1500).then(() => {
     $('#exampleModalCenter').on('hidden.bs.modal', () => window.location.reload());
   });
@@ -19,7 +21,9 @@ export default function addScoreTableTemplate() {
       modalContentTemplate.innerHTML = template;
       const nameHero = document.getElementById('hero-name').textContent;
       let storageData = snapshot.val();
-      if (!storageData) { return null; }
+      if (!storageData) {
+        return null;
+      }
       const totalScore = scorePlayers.reduce((acc, el) => acc + el, 0);
       const pointTorKillMonster = 25;
       const player = { name: nameHero || 'Hero', score: Math.floor(totalScore / pointTorKillMonster) || 0 };

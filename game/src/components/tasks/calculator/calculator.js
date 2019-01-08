@@ -2,7 +2,7 @@ import template from './calculator-template';
 import './calculator.scss';
 import randomInteger, { getArithmeticOperator, getArithmeticResult } from './calculator-utils';
 import compareClientResult from '../scoreLife/line-score';
-
+import { keyBoardEnter } from '../utils';
 
 export default function addCalculatorTaskTemplate() {
   const modalContentTemplate = document.getElementById('dynamic-content');
@@ -23,4 +23,5 @@ export default function addCalculatorTaskTemplate() {
 
   const btnSave = document.getElementById('save-changes');
   btnSave.addEventListener('click', () => compareClientResult(result));
+  keyBoardEnter();
 }

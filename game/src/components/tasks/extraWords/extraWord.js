@@ -1,6 +1,6 @@
 import template from './extraWord-template';
 import { extraWord, extraWordAnswer } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import './extraWord.scss';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
@@ -29,4 +29,5 @@ export default function chooseExtraWord() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

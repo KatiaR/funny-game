@@ -1,7 +1,7 @@
 import template from './sequence-template';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 import './sequence.scss';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 
 const max = 50;
 const min = 0;
@@ -62,4 +62,5 @@ export default function addSequence() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

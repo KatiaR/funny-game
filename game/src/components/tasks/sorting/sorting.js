@@ -3,7 +3,7 @@ import './sorting.scss';
 import addDataToSortingTask from './sorting-utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 import {
-  allowDrop, drop, drag,
+  allowDrop, drop, drag, keyBoardEnter,
 } from '../utils';
 
 
@@ -38,4 +38,5 @@ export default function addSortingTaskTemplate() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }

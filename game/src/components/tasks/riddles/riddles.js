@@ -1,6 +1,6 @@
 import template from './riddles-template';
 import { riddles } from '../../loading/data';
-import randomInteger from '../utils';
+import randomInteger, { keyBoardEnter } from '../utils';
 import { addSpellAndSoundMonster, addSpellAndSoundHero } from '../scoreLife/line-score';
 
 const max = riddles.length - 1;
@@ -23,4 +23,5 @@ export default function guessRiddle() {
       addSpellAndSoundMonster();
     }
   });
+  keyBoardEnter();
 }
